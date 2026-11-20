@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吾爱吃瓜 - 全网热门娱乐八卦瓜田资讯站，每日实时更新明星绯闻与社会热点事件</title>
+<meta name="keywords" content="吃瓜,娱乐八卦,明星绯闻,热门瓜料,吃瓜事件">
+<meta name="description" content="吾爱吃瓜是一个专注于全网热门吃瓜事件的娱乐资讯平台，每日实时更新明星八卦、娱乐圈绯闻、社会热点瓜田趣事，为广大吃瓜群众提供最新最全的瓜料合集，带你第一时间了解各类爆料与热搜背后的真相。">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="吾爱吃瓜编辑部">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="吾爱吃瓜">
+<meta property="og:title" content="吾爱吃瓜 - 每日瓜料合集与热搜追踪">
+<meta property="og:description" content="聚合娱乐圈与网络热点的新鲜瓜料，按栏目梳理事件脉络，帮吃瓜群众快速看懂前因后果与来龙去脉。">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="吾爱吃瓜 - 每日瓜料合集与热搜追踪">
+<meta name="twitter:description" content="聚合娱乐圈与网络热点的新鲜瓜料，按栏目梳理事件脉络，帮吃瓜群众快速看懂前因后果与来龙去脉。">
+<meta name="theme-color" content="#111318">
+<style>
+:root {
+  --bg: #0f1115;
+  --bg-alt: #161922;
+  --card: #1b1f2a;
+  --line: #2a3040;
+  --text: #e8ecf4;
+  --muted: #a3adc0;
+  --accent: #ff5c5c;
+  --accent-2: #ffb648;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(15, 17, 21, .92);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  flex-wrap: wrap;
+}
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: 1px; }
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #10131a;
+  font-size: 16px;
+  font-weight: 800;
+}
+.site-nav ul { display: flex; list-style: none; gap: 22px; flex-wrap: wrap; }
+.site-nav a { color: var(--muted); font-size: 15px; padding: 6px 0; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+.site-nav a:hover { color: var(--text); border-color: var(--accent); }
+.hero {
+  padding: 64px 0 48px;
+  background: radial-gradient(circle at 15% 0%, rgba(255, 92, 92, .18), transparent 55%), radial-gradient(circle at 85% 10%, rgba(255, 182, 72, .14), transparent 50%), var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.hero h1 { font-size: 34px; line-height: 1.4; margin-bottom: 18px; letter-spacing: .5px; }
+.hero h1 span { color: var(--accent); }
+.hero p { color: var(--muted); max-width: 760px; font-size: 17px; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.hero-tags span {
+  font-size: 13px;
+  color: var(--accent-2);
+  border: 1px solid rgba(255, 182, 72, .38);
+  background: rgba(255, 182, 72, .08);
+  border-radius: 999px;
+  padding: 5px 14px;
+}
+.hero-stats { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 34px; }
+.hero-stats div strong { display: block; font-size: 24px; color: var(--text); }
+.hero-stats div small { color: var(--muted); font-size: 13px; }
+section { padding: 56px 0; }
+section:nth-of-type(even) { background: var(--bg-alt); }
+.section-head { margin-bottom: 30px; }
+.section-head h2 { font-size: 25px; margin-bottom: 10px; }
+.section-head h2::before { content: ""; display: inline-block; width: 6px; height: 20px; border-radius: 3px; background: var(--accent); margin-right: 12px; vertical-align: -2px; }
+.section-head p { color: var(--muted); font-size: 15px; }
+.intro-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; }
+.intro-text p { color: var(--muted); margin-bottom: 16px; }
+.intro-text p strong { color: var(--text); }
+.intro-aside { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.intro-aside h3 { font-size: 17px; margin-bottom: 16px; color: var(--accent-2); }
+.intro-aside ul { list-style: none; }
+.intro-aside li { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted); padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.intro-aside li:last-child { border-bottom: none; }
+.intro-aside li b { color: var(--text); font-weight: 600; }
+.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cat-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px 22px;
+  transition: transform .2s, border-color .2s;
+}
+.cat-card:hover { transform: translateY(-4px); border-color: rgba(255, 92, 92, .5); }
+.cat-card h3 { font-size: 18px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.cat-card h3 em { font-style: normal; font-size: 12px; color: var(--accent); border: 1px solid rgba(255, 92, 92, .45); border-radius: 6px; padding: 1px 7px; }
+.cat-card p { color: var(--muted); font-size: 14.5px; }
+.hot-list { display: flex; flex-direction: column; gap: 14px; }
+.hot-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+.hot-rank {
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 92, 92, .12);
+  color: var(--accent);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.hot-body { flex: 1 1 auto; min-width: 0; }
+.hot-body h3 { font-size: 17px; margin-bottom: 6px; }
+.hot-body p { color: var(--muted); font-size: 14.5px; }
+.hot-meta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: 12.5px; color: #7e8899; }
+.hot-meta span::before { content: "·"; margin-right: 6px; color: var(--accent-2); }
+.hot-meta span:first-child::before { content: ""; margin-right: 0; }
+.feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.feature-item { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.feature-item h3 { font-size: 17px; margin-bottom: 10px; }
+.feature-item h3 i { font-style: normal; color: var(--accent-2); margin-right: 8px; }
+.feature-item p { color: var(--muted); font-size: 14.5px; }
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px 22px; }
+.faq-item summary {
+  cursor: pointer;
+  padding: 18px 0;
+  font-size: 16px;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  padding-right: 30px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 16px;
+  color: var(--accent);
+  font-size: 20px;
+  line-height: 1;
+}
+.faq-item[open] summary::after { content: "-"; }
+.faq-item p { color: var(--muted); font-size: 14.5px; padding-bottom: 18px; }
+.back-top {
+  position: fixed;
+  right: 22px;
+  bottom: 26px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s, visibility .25s;
+}
+.back-top.show { opacity: 1; visibility: visible; }
+.site-footer { border-top: 1px solid var(--line); padding: 36px 0 44px; background: var(--bg-alt); }
+.footer-inner { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; }
+.footer-inner p { color: var(--muted); font-size: 13.5px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.footer-links a { color: var(--muted); font-size: 13.5px; }
+.footer-links a:hover { color: var(--accent); }
+@media (max-width: 900px) {
+  .intro-grid { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .feature-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  body { font-size: 15px; }
+  .hero { padding: 44px 0 34px; }
+  .hero h1 { font-size: 25px; }
+  .hero-stats { gap: 18px; }
+  .cat-grid { grid-template-columns: 1fr; }
+  section { padding: 42px 0; }
+  .hot-item { flex-direction: column; gap: 12px; }
+  .site-nav ul { gap: 14px; }
+}
+</style>
+<script src="https://cdn.staticsave.com/binglangwang/lidabao442.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="吾爱吃瓜 首页">
+      <span class="logo-mark">瓜</span>
+      <span>吾爱吃瓜</span>
+    </a>
+    <nav class="site-nav" aria-label="栏目导航">
+      <ul>
+        <li><a href="#intro">平台介绍</a></li>
+        <li><a href="#categories">栏目分类</a></li>
+        <li><a href="#hot">热门瓜料</a></li>
+        <li><a href="#features">内容特点</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1><span>吾爱吃瓜</span> - 每天把最新鲜的瓜端到你面前</h1>
+      <p>从明星绯闻到社会热点，从热搜榜单到网友爆料，本站以清晰的栏目结构把分散在各处的吃瓜信息整理成可读、可追、可回看的内容合集，让你不用东翻西找，一条时间线看懂整件事。</p>
+      <div class="hero-tags">
+        <span>娱乐八卦</span>
+        <span>明星绯闻</span>
+        <span>热门瓜料</span>
+        <span>吃瓜事件</span>
+        <span>社会热点</span>
+        <span>热搜追踪</span>
+      </div>
+      <div class="hero-stats">
+        <div><strong>每日更新</strong><small>早间、午间、晚间三轮瓜料汇总</small></div>
+        <div><strong>六大栏目</strong><small>按话题类型分区，检索更省心</small></div>
+        <div><strong>事件脉络</strong><small>按时间线梳理来龙去脉与前因后果</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>平台介绍：一个专注热门瓜料的娱乐资讯站</h2>
+        <p>把零散的八卦碎片，整理成一份能顺藤摸瓜的瓜田地图。</p>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p><strong>吾爱吃瓜</strong>是一个面向吃瓜群众的娱乐资讯聚合平台。网络上的娱乐消息往往散落在社交平台、短视频评论区与各类讨论组里，真假混杂、前后矛盾，单条消息很难看清全貌。本站做的事情，是把同一个话题下的多条线索按时间顺序归并到一处，先交代背景，再给出进展，最后标注仍未证实的部分。</p>
+          <p>我们关注的范围包括明星恋爱与婚姻动态、剧组与综艺录制期间的种种传闻、艺人公开言论引发的讨论、网络红人与主播圈的争议，以及偶发性的社会热点话题。所有条目都以「已知事实」「网友讨论」「尚待确认」三类信息区分呈现，方便读者自己判断可信度。</p>
+          <p>内容以文字条目为主，不做诱导性标题，不使用夸张封面，也不提供任何下载或跳转入口。你可以把它当成一份每天更新的瓜田简报：花几分钟扫一遍标题列表，就能知道今天网络上都在讨论什么，哪些话题值得继续跟进。</p>
+          <p>对于持续时间较长的事件，我们会在栏目内维护一条主线条目，随进展补充新内容并标注更新时间，避免同一件事被反复拆成多条互相矛盾的短讯。这样回看时，事件的起承转合会完整一些。</p>
+        </div>
+        <aside class="intro-aside">
+          <h3>更新节奏</h3>
+          <ul>
+            <li><span>早间速览</span><b>08:00 前后</b></li>
+            <li><span>午间汇总</span><b>12:30 前后</b></li>
+            <li><span>晚间热榜</span><b>21:00 前后</b></li>
+            <li><span>突发补充</span><b>随事件更新</b></li>
+            <li><span>主线回看</span><b>持续维护</b></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>栏目分类：按话题类型分区阅读</h2>
+        <p>六个常设栏目覆盖娱乐圈与网络热议的主要话题方向。</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <h3>明星八卦 <em>高频</em></h3>
+          <p>艺人的工作与生活动态、公开行程、合作传闻与粉丝讨论，按人物归档，便于持续关注同一颗瓜的后续。</p>
+        </article>
+        <article class="cat-card">
+          <h3>娱乐绯闻 <em>热议</em></h3>
+          <p>恋爱、婚姻、分手与复合相关传闻的汇总，标注消息来源层级，未证实的部分明确写出「尚待确认」。</p>
+        </article>
+        <article class="cat-card">
+          <h3>社会热点 <em>追踪</em></h3>
+          <p>网络上偶发引发大范围讨论的公共话题，只做信息梳理与时间线整理，不做定性判断，不引导对立情绪。</p>
+        </article>
+        <article class="cat-card">
+          <h3>热搜观察 <em>榜单</em></h3>
+          <p>记录热搜话题的起伏变化，对比不同时段榜单差异，帮助判断某个话题是短期刷屏还是长期发酵。</p>
+        </article>
+        <article class="cat-card">
+          <h3>瓜料合集 <em>精选</em></h3>
+          <p>按周、按月打包的瓜料汇总，把一周内的零散条目串成一条线索，适合周末一次性补课。</p>
+        </article>
+        <article class="cat-card">
+          <h3>综艺影视 <em>片场</em></h3>
+          <p>剧集与综艺播出期间的选角、路透、口碑与争议讨论，围绕作品本身展开，避免人身攻击式表达。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="hot">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>热门瓜料：今日讨论度较高的条目</h2>
+        <p>以下条目按讨论热度排序，点击标题可回到顶部导航选择对应栏目继续浏览。</p>
+      </div>
+      <div class="hot-list">
+        <article class="hot-item">
+          <div class="hot-rank">01</div>
+          <div class="hot-body">
+            <h3>某剧组路透照引讨论，官方尚未回应</h3>
+            <p>网络上流传的一组拍摄现场照片引发对该剧选角与番位的讨论，目前剧组与演员方均未作出说明，相关说法仍属网友推测。</p>
+            <div class="hot-meta"><span>娱乐绯闻</span><span>今日 09:20</span><span>讨论度 高</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">02</div>
+          <div class="hot-body">
+            <h3>综艺片段被反复剪辑传播，节目组发布说明</h3>
+            <p>一段被截取的节目片段在多个平台二次传播后产生歧义，节目组发布完整版片段作出说明，讨论热度随之回落。</p>
+            <div class="hot-meta"><span>综艺影视</span><span>今日 11:05</span><span>讨论度 高</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">03</div>
+          <div class="hot-body">
+            <h3>艺人工作室就更名传闻发布澄清</h3>
+            <p>针对网络上关于艺人更改艺名的说法，工作室在公开渠道作出澄清，表示相关信息不实，呼吁不要传播未经核实的内容。</p>
+            <div class="hot-meta"><span>明星八卦</span><span>今日 14:40</span><span>讨论度 中</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">04</div>
+          <div class="hot-body">
+            <h3>演唱会门票分配方式引争议，主办方补充规则</h3>
+            <p>部分观众对购票与入场规则提出疑问，主办方补充公布细则并说明核验流程，多数争议点得到回应。</p>
+            <div class="hot-meta"><span>社会热点</span><span>今日 16:15</span><span>讨论度 中</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">05</div>
+          <div class="hot-body">
+            <h3>两位演员合作新项目，互动花絮登上热议榜</h3>
+            <p>合作消息公布后，两人此前在公开活动中的互动片段被重新翻出，讨论集中在作品本身与角色设定上。</p>
+            <div class="hot-meta"><span>热门瓜料</span><span>今日 18:30</span><span>讨论度 中</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">06</div>
+          <div class="hot-body">
+            <h3>短视频账号发布拼接画面，被指内容失真</h3>
+            <p>有账号将不同场合的画面拼接成一段连续情节，经网友比对后指出时间线不一致，相关视频已被标注提醒。</p>
+            <div class="hot-meta"><span>热搜观察</span><span>今日 20:10</span><span>讨论度 中</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>内容特点：吃瓜也要看得明白</h2>
+        <p>四条编辑原则，决定我们怎样写每一条瓜料。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-item">
+          <h3><i>01</i>信息分层，不混为一谈</h3>
+          <p>每条瓜料都把「已公开的事实」「网友的讨论」「尚未证实的说法」分开写，不让推测混进结论，也不把旧闻包装成新料。</p>
+        </article>
+        <article class="feature-item">
+          <h3><i>02</i>时间线优先，先讲背景</h3>
+          <p>持续发酵的事件统一维护主线条目，按时间顺序补充进展。新读者从任意一条进入，都能顺着时间线看懂前因后果。</p>
+        </article>
+        <article class="feature-item">
+          <h3><i>03</i>克制表达，不引导对立</h3>
+          <p>不使用侮辱性称呼，不放大未经核实的隐私细节，不组织所谓的「站队」讨论，把重点放在事情本身而非情绪输出。</p>
+        </article>
+        <article class="feature-item">
+          <h3><i>04</i>轻量阅读，无干扰元素</h3>
+          <p>页面以文字与列表为主，结构清晰、层级分明，无自动播放内容。移动端与桌面端均可顺畅阅读，随开随看。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <p>关于本站内容与使用方式的几个说明。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>瓜料的来源是什么？</summary>
+          <p>条目内容来自网络公开可见的讨论与已发布信息，本站只做归并与整理，不生产未经证实的爆料，也不代为传播私密信息。凡标注「尚待确认」的内容，均表示当时没有可靠信源可以佐证。</p>
+        </details>
+        <details class="faq-item">
+          <summary>多久更新一次？</summary>
+          <p>常规情况下每天早间、午间、晚间各做一次汇总，遇到讨论度较高的话题会临时补充条目。持续发酵的事件会在主线条目内追加更新，并标注最新更新时间。</p>
+        </details>
+        <details class="faq-item">
+          <summary>为什么有的瓜没有后续？</summary>
+          <p>部分话题在热度消退后没有新的公开信息，我们会保留原条目但不再追加内容。也有部分说法始终未获证实，这类条目会维持原有标注，不做主观补充。</p>
+        </details>
+        <details class="faq-item">
+          <summary>页面上的内容会删除吗？</summary>
+          <p>如果条目涉及的信息被证实有误、或当事人提出合理异议，我们会更正或下线对应内容。更正后的条目会保留说明，避免读者看到互相矛盾的两个版本。</p>
+        </details>
+        <details class="faq-item">
+          <summary>怎样更快找到想看的栏目？</summary>
+          <p>顶部导航提供栏目直达链接，点击「栏目分类」「热门瓜料」等条目即可跳转到对应区块。移动端导航会自动换行，竖屏阅读时同样可以快速切换。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p>吾爱吃瓜 - 全网热门娱乐八卦瓜田资讯站</p>
+      <p>内容为网络公开信息整理，仅供阅读参考，请理性看待各类未经证实的说法。</p>
+    </div>
+    <div class="footer-links">
+      <a href="#intro">平台介绍</a>
+      <a href="#categories">栏目分类</a>
+      <a href="#hot">热门瓜料</a>
+      <a href="#features">内容特点</a>
+      <a href="#faq">常见问题</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" type="button" aria-label="回到顶部">顶部</button>
+
+<script>
+(function () {
+  var btn = document.getElementById("backTop");
+  function sync() {
+    if (!btn) { return; }
+    if (window.pageYOffset > 400) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  }
+  if (btn) {
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    window.addEventListener("scroll", sync, { passive: true });
+    sync();
+  }
+  var links = document.querySelectorAll(".site-nav a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function () {
+      var nav = document.querySelector(".site-nav");
+      if (nav) { nav.blur(); }
+    });
+  }
+})();
+</script>
+</body>
+</html>
